@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Adicionar Comentario</title>
+</head>
+<body>
+    <div class="container">
+        <form class="form" name="formulario">
+            <input class="input" type="text" name="autor" placeholder="Seu nome" value="" autocomplete="off">
+            <input class="input" type="text" name="coment" maxlength="55" placeholder="Escreva um comentário..." value="" autocomplete="off">
+            <div class="buttons-area">
+                <input class="btn" type="button" value="Publicar" onclick="publicar(autor.value, coment.value)">
+                <input class="btn" type="button" value="Limpar" onclick="limpar()">
+            </div>        
+        </form>
+        <div class="comment-area"></div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
