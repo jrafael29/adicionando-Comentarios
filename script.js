@@ -4,7 +4,8 @@ let publicacoes = []
 // função para limpar todo o campo do comentario
 async function limpar(){
     comentArea.innerHTML = ""
-    i = 0
+    formulario.autor.value = ""
+    formulario.coment.value = ""
 }
 // função para publicar o comentario dentro da div "comment-area"
 
@@ -48,6 +49,9 @@ async function publicar(autor, comentario){
             <input class="btn" type="button" value="Excluir" onclick="excluirComentario(${i})">
         </div>`
     }
+    // limpa os campos, apos publicação
+    formulario.autor.value = ""
+    formulario.coment.value = ""
 }
 // função para excluir o proprio comentario
 function excluirComentario(id){
